@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const links = [
   {
@@ -7,27 +9,36 @@ const links = [
   },
   {
     name: "About",
-    destination: "about",
+    destination: "/about",
   },
   {
     name: "Contact",
-    destination: "contact",
+    destination: "/contact",
   },
   {
     name: "Resume",
-    destination: "resume",
+    destination: "/resume",
   },
 ];
 
 export default function Header() {
+  const currentPathname = usePathname();
+  const currentLink = links.find(
+    (element) => element.destination === currentPathname
+  );
+
   return (
     <div className="font-mono row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
       {links.map(({ name, destination }) => {
+        const isSelected = destination === currentLink?.destination;
         return (
           <Link
             key={name}
             href={destination}
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
+            className={
+              (isSelected ? "bg-[#f2f2f2] dark:bg-[#1a1a1a] " : "") +
+              "rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
+            }
           >
             {name}
           </Link>
