@@ -1,34 +1,26 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const links = [
   {
-    name: "Home",
-    destination: "/",
+    name: 'About',
+    destination: '/',
   },
   {
-    name: "About",
-    destination: "/about",
-  },
-  {
-    name: "Contact",
-    destination: "/contact",
-  },
-  {
-    name: "Resume",
-    destination: "/resume",
+    name: 'Resume',
+    destination: '/resume',
   },
 ];
 
 export default function Header() {
   const currentPathname = usePathname();
   const currentLink = links.find(
-    (element) => element.destination === currentPathname
+    (element) => element.destination === currentPathname,
   );
 
   return (
-    <div className="font-mono row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+    <div className='row-start-3 flex flex-wrap items-center justify-center gap-[24px] font-mono'>
       {links.map(({ name, destination }) => {
         const isSelected = destination === currentLink?.destination;
         return (
@@ -36,8 +28,8 @@ export default function Header() {
             key={name}
             href={destination}
             className={
-              (isSelected ? "text-blue-500 " : "") +
-              "rounded-full transition-colors flex items-center justify-center font-extrabold text-sm sm:text-base sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
+              (isSelected ? 'text-blue-500 ' : '') +
+              'flex w-full items-center justify-center rounded-full px-4 text-sm font-extrabold sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px]'
             }
           >
             {name}
