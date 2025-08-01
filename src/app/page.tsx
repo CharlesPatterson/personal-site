@@ -1,23 +1,56 @@
 import Image from 'next/image';
 
-export default function Home() {
+const companies = [
+  {
+    name: 'Under Armour',
+    industry: 'E-Commerce',
+    url: 'https://en.wikipedia.org/wiki/Under_Armour',
+  },
+  {
+    name: 'Compass Learning / Edgenuity',
+    industry: 'EdTech',
+    url: 'https://www.imaginelearning.com/',
+  },
+  {
+    name: 'Springbox',
+    industry: 'Digital Marketing',
+    url: 'https://www.linkedin.com/company/springbox',
+  },
+  {
+    name: 'E2open',
+    industry: 'Supply Chain management',
+    url: 'https://www.e2open.com/',
+  },
+];
+
+export default function About() {
   return (
     <div className='grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center font-sans'>
-      <main className='row-start-2 flex flex-col items-center gap-[32px]'>
+      <main className='row-start-2 m-5 flex flex-col items-center gap-[32px]'>
+        <h2 className='text-8xl [text-shadow:_0_4px_8px_rgba(128,128,128,0.6)]'>
+          <a
+            href='https://www.linkedin.com/in/charles-patterson-fullstack-engineer/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Charles Patterson
+          </a>
+        </h2>
         <Image
           alt='Picture of Charles Patterson wearing headphones'
-          className='flex flex-auto border-2 border-solid border-black'
+          className='flex flex-auto'
           src='/ProfilePicture.png'
           width='300'
           height='100'
         ></Image>
         <div>
           <p>
-            I&apos;m a software engineer with over 10+ years of industry
+            Hello there! I&apos;m a software engineer with 10+ years of industry
             experience and 3+ years experience leading development teams.
           </p>
+          <br />
           <p>
-            My background is as a generalist that has worked across the full
+            My career has been as a generalist that has worked across the full
             stack: from front-end to back-end to builds and infrastructure.
           </p>
           <br />
@@ -30,10 +63,15 @@ export default function Home() {
             Companies and Industries I&apos;ve worked in:
           </span>
           <ol className='list-inside list-disc'>
-            <li>Under Armour - E-Commerce</li>
-            <li>Springbox - Digital Marketing</li>
-            <li>Compass Learning/Edgenuity - EdTech</li>
-            <li>E2open - Supply Chain Management</li>
+            {companies.map(({ name, industry, url }) => {
+              return (
+                <li key={name}>
+                  <a href={url} target='_blank' rel='noopener noreferrer'>
+                    {name} - {industry}
+                  </a>
+                </li>
+              );
+            })}
           </ol>
           <br />
           <span className='font-bold'>
