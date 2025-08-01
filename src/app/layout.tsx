@@ -1,15 +1,17 @@
 import Header from "./ui/components/header";
 import Footer from "./ui/components/footer";
-import { Funnel_Sans, Funnel_Display } from "next/font/google";
+import { Fira_Sans, Fira_Mono } from "next/font/google";
 import "./globals.css";
 
-const funnelSans = Funnel_Sans({
-  variable: "--font-funnel-sans",
+const firaSans = Fira_Sans({
+  weight: "400",
+  variable: "--font-fira-sans",
   subsets: ["latin"],
 });
 
-const funnelDisplay = Funnel_Display({
-  variable: "--font-funnel-display",
+const firaMono = Fira_Mono({
+  weight: "400",
+  variable: "--font-fira-mono",
   subsets: ["latin"],
 });
 
@@ -24,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${funnelSans.variable} ${funnelDisplay.variable} antialiased`}
-      >
+      <body className={`${firaSans.variable} ${firaMono.variable} antialiased`}>
         <Header></Header>
         {children}
         <Footer></Footer>
