@@ -20,6 +20,7 @@ export default function Resume() {
   return (
     <div className="grid items-center justify-items-center pt-5">
       <Document
+        className="border-b-black border-solid border-2"
         file="Resume-CharlesPatterson.pdf"
         onLoadSuccess={onDocumentLoadSuccess}
       >

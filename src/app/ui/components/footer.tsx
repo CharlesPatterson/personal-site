@@ -38,6 +38,23 @@ export default function Footer() {
         );
       })}
 
+      <p>
+        <a
+          href="https://nextjs.org/"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/vercel.svg"
+            alt="File icon"
+            width={16}
+            height={16}
+          />
+          Powered by Next.js
+        </a>
+      </p>
       <p>&copy; {new Date().getFullYear()} Charles Patterson</p>
     </footer>
   );
