@@ -15,10 +15,6 @@ const firaMono = Fira_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Charles Patterson's Personal Site",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
