@@ -1,17 +1,21 @@
 import Header from "./ui/components/header";
 import Footer from "./ui/components/footer";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Funnel_Sans, Funnel_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const funnelSans = Funnel_Sans({
+  variable: "--font-funnel-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const funnelDisplay = Funnel_Display({
+  variable: "--font-funnel-display",
   subsets: ["latin"],
 });
+
+export const metadata = {
+  title: "Charles Patterson's Personal Site",
+};
 
 export default function RootLayout({
   children,
@@ -21,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${funnelSans.variable} ${funnelDisplay.variable} antialiased`}
       >
         <Header></Header>
         {children}
