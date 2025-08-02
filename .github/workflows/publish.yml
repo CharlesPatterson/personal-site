@@ -24,8 +24,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - run: npm ci
-      - name: Setup Node.js
-        uses: ./.github/workflows/setup-node
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
