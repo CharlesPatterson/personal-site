@@ -1,5 +1,5 @@
 'use client';
-import PDFViewer from '../ui/components/PDFViewerWrapper';
+import PDFViewer from '../../lib/ui/components/PDFViewerWrapper';
 
 export default function Resume() {
   return (

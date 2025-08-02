@@ -1,8 +1,8 @@
-import Header from './ui/components/header';
-import Footer from './ui/components/footer';
 import { Metadata } from 'next';
 import { Fira_Sans, Fira_Mono } from 'next/font/google';
 import './globals.css';
+import Header from '@/lib/ui/components/Header';
+import Footer from '@/lib/ui/components/Footer';
 
 const firaSans = Fira_Sans({
   weight: '400',
