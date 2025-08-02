@@ -39,7 +39,7 @@ export default function About() {
         <Image
           alt='Picture of Charles Patterson wearing headphones'
           className='flex flex-auto'
-          src='/ProfilePicture.png'
+          src='/personal-site/ProfilePicture.png'
           width='300'
           height='100'
         ></Image>

@@ -4,13 +4,13 @@ const social_links = [
   {
     name: 'Github',
     destination: 'https://github.com/ua-cpatterson',
-    svg: '/github-octocat-svgrepo-com.svg',
+    svg: '/personal-site/github-octocat-svgrepo-com.svg',
   },
   {
     name: 'LinkedIn',
     destination:
       'https://www.linkedin.com/in/charles-patterson-fullstack-engineer/',
-    svg: '/linkedin-color-svgrepo-com.svg',
+    svg: '/personal-site/linkedin-color-svgrepo-com.svg',
   },
 ];
 
@@ -47,7 +47,7 @@ export default function Footer() {
         >
           <Image
             aria-hidden
-            src='/vercel.svg'
+            src='/personal-site/vercel.svg'
             alt='File icon'
             width={16}
             height={16}
