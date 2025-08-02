@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import DarkModeSlider from './darkmode';
 
 const links = [
   {
@@ -36,6 +37,8 @@ export default function Header() {
           </Link>
         );
       })}
+
+      <DarkModeSlider />
     </div>
   );
 }
