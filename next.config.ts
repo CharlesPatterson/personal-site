@@ -2,7 +2,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   basePath: '/personal-site',
-  assetPrefix: '/personal-site/',
+  assetPrefix: '/personal-site/public/',
   output: 'export',
   reactStrictMode: true,
   images: {
