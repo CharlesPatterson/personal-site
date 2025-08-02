@@ -23,10 +23,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - run: npm ci
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
       - name: Build with Next.js
         run: npx next build
       - name: Upload artifact
