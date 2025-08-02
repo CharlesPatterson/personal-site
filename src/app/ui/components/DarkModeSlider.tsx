@@ -1,8 +1,21 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const DarkModeSlider = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const storedTheme = localStorage.getItem('theme');
+      if (storedTheme) {
+        return storedTheme;
+      }
+    }
+
+    return 'light';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   return (
     <div className='flex flex-row items-center gap-4'>

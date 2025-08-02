@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import DarkModeSlider from './darkmode';
+import DarkModeSlider from './DarkModeSlider';
 
 const links = [
   {
