@@ -21,7 +21,7 @@ export default function Header() {
   );
 
   return (
-    <div className='row-start-3 mt-5 flex flex-wrap items-center justify-center gap-[24px] font-mono'>
+    <div className='header sticky top-0 row-start-3 mt-5 flex flex-wrap items-center justify-center gap-[24px] font-mono'>
       {links.map(({ name, destination }) => {
         const isSelected = destination === currentLink?.destination;
         return (
