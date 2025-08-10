@@ -54,7 +54,7 @@ a {
         --tw-duration,
         var(--default-transition-duration) /* 150ms */
       );
-      color: var(--color-orange-500) /* oklch(70.5% 0.213 47.604) */;
+      color: var(--color-cyan-600);
     }
   }
   transition-property:

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import NextLogo from '~icons/logos/nextjs-icon.jsx';
 import ReactLogo from '~icons/logos/react.jsx';
 import JenkinsLogo from '~icons/logos/jenkins.jsx';
