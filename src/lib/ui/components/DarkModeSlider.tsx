@@ -1,5 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
+import MoonLogo from '~icons/solar/moon-outline.jsx';
+import SunLogo from '~icons/solar/sun-2-outline.jsx';
 
 const DarkModeSlider = () => {
   const [theme, setTheme] = useState(() => {
@@ -18,14 +20,10 @@ const DarkModeSlider = () => {
   }, [theme]);
 
   return (
-    <div className='flex flex-row items-center gap-4'>
-      <span className='text-[14px]'>☀️</span>
-      <label
-        className='relative inline-block h-[34px] w-[60px]'
-        htmlFor='checkbox'
-      >
+    <div className='flex flex-row items-center font-bold hover:text-cyan-600'>
+      <label htmlFor='checkbox' className='cursor-pointer'>
         <input
-          className='peer hidden'
+          className='peer hidden cursor-pointer'
           type='checkbox'
           id='checkbox'
           onChange={(e) => {
@@ -35,9 +33,16 @@ const DarkModeSlider = () => {
           }}
           defaultChecked={theme === 'dark'}
         />
-        <div className='slider absolute top-0 right-0 bottom-0 left-0 cursor-pointer rounded-[34px] bg-gray-400 duration-200 peer-checked:bg-cyan-600 before:absolute before:bottom-[4px] before:left-[4px] before:h-[26px] before:w-[26px] before:rounded-[50%] before:bg-white before:duration-300 peer-checked:before:translate-x-[26px]'></div>
+        {theme && theme === 'dark' ? (
+          <span>
+            Dark Mode <MoonLogo className='inline-block' />
+          </span>
+        ) : (
+          <span>
+            Light Mode <SunLogo className='inline-block' />
+          </span>
+        )}
       </label>
-      <span className='text-[14px]'>🌒</span>
     </div>
   );
 };
