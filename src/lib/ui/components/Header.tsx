@@ -1,7 +1,6 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Image from 'next/image';
 import DarkModeSlider from './DarkModeSlider';
 import DocumentLogo from '~icons/basil/document-outline.jsx';
 import PersonLogo from '~icons/ic/outline-person.jsx';
@@ -38,7 +37,7 @@ export default function Header() {
   );
 
   return (
-    <div className='header font-inter sticky top-0 row-start-3 mt-5 flex flex-wrap items-center justify-center gap-[24px]'>
+    <div className='header font-inter sticky top-0 row-start-3 mt-5 flex flex-wrap items-center justify-center gap-[24px] sm:text-base'>
       {links.map(({ name, destination }) => {
         const isSelected = destination === currentLink?.destination;
         return (
