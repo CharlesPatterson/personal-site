@@ -150,9 +150,8 @@ export default function About() {
             <li>
               <h3 className='italic'>Builds</h3>
               <p className='mb-2 ml-5'>
-                Github Actions
-                <GithubActionsLogo className='inline-block' /> | Jenkins{' '}
-                <JenkinsLogo className='inline-block' />
+                Github Actions <GithubActionsLogo className='inline-block' /> |
+                Jenkins <JenkinsLogo className='inline-block' />
               </p>
             </li>
             <li>
