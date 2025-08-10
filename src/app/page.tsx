@@ -1,4 +1,48 @@
 import Image from 'next/image';
+import NextLogo from '~icons/logos/nextjs-icon.jsx';
+import ReactLogo from '~icons/logos/react.jsx';
+import JenkinsLogo from '~icons/logos/jenkins.jsx';
+import VisualStudioCodeLogo from '~icons/logos/visual-studio-code.jsx';
+import GithubLogo from '~icons/logos/github-octocat.jsx';
+import GraphQLLogo from '~icons/logos/graphql.jsx';
+import GithubActionsLogo from '~icons/logos/github-actions.jsx';
+import TextmateLogo from '~icons/file-icons/textmate.jsx';
+import NeoVimLogo from '~icons/devicon/neovim.jsx';
+import TypescriptLogo from '~icons/devicon/typescript.jsx';
+import JavascriptLogo from '~icons/devicon/javascript.jsx';
+import PythonLogo from '~icons/devicon/python.jsx';
+import ExpressLogo from '~icons/devicon/express.jsx';
+import TailwindCSSLogo from '~icons/devicon/tailwindcss.jsx';
+import PostmanLogo from '~icons/devicon/postman.jsx';
+import ChromeLogo from '~icons/devicon/chrome.jsx';
+import ZshLogo from '~icons/devicon/zsh.jsx';
+import SwaggerLogo from '~icons/devicon/swagger.jsx';
+import GoLogo from '~icons/devicon/go.jsx';
+import FastAPILogo from '~icons/devicon/fastapi.jsx';
+import DockerLogo from '~icons/devicon/docker.jsx';
+import KubernetesLogo from '~icons/devicon/kubernetes.jsx';
+import TerraformLogo from '~icons/devicon/terraform.jsx';
+import PostgresqlLogo from '~icons/devicon/postgresql.jsx';
+import DynamoDBLogo from '~icons/devicon/dynamodb.jsx';
+import RedisLogo from '~icons/devicon/redis.jsx';
+import DatadogLogo from '~icons/devicon/datadog.jsx';
+import ExcalidrawLogo from '~icons/material-icon-theme/excalidraw.jsx';
+import JIRALogo from '~icons/devicon/jira.jsx';
+import ConfluenceLogo from '~icons/devicon/confluence.jsx';
+import SlackLogo from '~icons/devicon/slack.jsx';
+import MicrosoftTeamsLogo from '~icons/logos/microsoft-teams.jsx';
+import RestAPILogo from '~icons/dashicons/rest-api.jsx';
+import GRPCLogo from '~icons/logos/grpc.jsx';
+import CursorAILogo from '~icons/vscode-icons/file-type-cursorrules.jsx';
+import CatLogo from '~icons/openmoji/black-cat.jsx';
+import ChessLogo from '~icons/la/chess-board.jsx';
+import ConstructionLogo from '~icons/material-symbols/construction.jsx';
+import ComedyLogo from '~icons/mdi/comedy.jsx';
+import MicrosoftExcelLogo from '~icons/vscode-icons/file-type-excel.jsx';
+import LucidChartLogo from '~icons/flat-color-icons/line-chart.jsx';
+import RockClimbingLogo from '~icons/map/climbing.jsx';
+import VideogamesLogo from '~icons/arcticons/games.jsx';
+import AWSLogo from '~icons/logos/aws.jsx';
 
 const companies = [
   {
@@ -78,38 +122,85 @@ export default function About() {
             Technologies I&apos;ve enjoyed working with:
           </span>
           <ol className='list-inside list-disc'>
-            <li>Languages: Typescript | Javascript | Python</li>
             <li>
-              Frameworks/Libraries: Next.js | Express.js | FastAPI | Tailwind |
-              React
+              Languages: Typescript <TypescriptLogo className='inline-block' />{' '}
+              | Javascript <JavascriptLogo className='inline-block' /> | Golang{' '}
+              <GoLogo className='inline-block' /> | Python{' '}
+              <PythonLogo className='inline-block' />{' '}
             </li>
-            <li>Builds: Github Actions | Jenkins</li>
-            <li>APIs: GraphQL | REST</li>
-            <li>Infrastructure / Cloud: AWS, Kubernetes, Docker, Terraform</li>
-            <li>Databases/Storage: Postgres | DynamoDB | Redis</li>
-            <li>APM: Datadog</li>
+            <li>
+              Frameworks/Libraries: Next.js{' '}
+              <NextLogo className='inline-block' /> | Express.js{' '}
+              <ExpressLogo className='inline-block' /> | FastAPI{' '}
+              <FastAPILogo className='inline-block' /> | Tailwind{' '}
+              <TailwindCSSLogo className='inline-block' /> | React{' '}
+              <ReactLogo className='inline-block' />
+            </li>
+            <li>
+              Builds: Github Actions{' '}
+              <GithubActionsLogo className='inline-block' /> | Jenkins{' '}
+              <JenkinsLogo className='inline-block' />
+            </li>
+            <li>
+              APIs: GraphQL <GraphQLLogo className='inline-block' /> | REST{' '}
+              <RestAPILogo className='inline-block' /> |{' '}
+              <GRPCLogo className='inline-block' />
+            </li>
+            <li>
+              Infrastructure / Cloud: <AWSLogo className='inline-block' /> |
+              Kubernetes <KubernetesLogo className='inline-block' /> | Docker{' '}
+              <DockerLogo className='inline-block' /> | Terraform{' '}
+              <TerraformLogo className='inline-block' />
+            </li>
+            <li>
+              Databases/Storage: Postgres{' '}
+              <PostgresqlLogo className='inline-block' /> | DynamoDB{' '}
+              <DynamoDBLogo className='inline-block' /> | Redis{' '}
+              <RedisLogo className='inline-block' />
+            </li>
+            <li>
+              APM: Datadog <DatadogLogo className='inline-block' />
+            </li>
           </ol>
           <br />
           <span className='font-bold'>Tools I Frequently Use:</span>
           <ol className='list-inside list-disc'>
-            <li>Editors: VS Code | Textmate | VIM</li>
-            <li>Devtools: Git | Postman | Chrome DevTools | zsh</li>
             <li>
-              Documentation: Swagger | Lucidchart | Excalidraw | Confluence |
-              JIRA
+              Editors: CursorAI <CursorAILogo className='inline-block' /> | VS
+              Code <VisualStudioCodeLogo className='inline-block' /> | NeoVIM{' '}
+              <NeoVimLogo className='inline-block' /> | Textmate{' '}
+              <TextmateLogo className='inline-block' />
             </li>
-            <li>Communication: Slack, Outlook</li>
-            <li>Microsoft Excel: Tables | Macros | XLookups</li>
+            <li>
+              Devtools: Git <GithubLogo className='inline-block' /> | Postman{' '}
+              <PostmanLogo className='inline-block' /> | Chrome DevTools{' '}
+              <ChromeLogo className='inline-block' /> | zsh{' '}
+              <ZshLogo className='inline-block' />
+            </li>
+            <li>
+              Documentation: Swagger <SwaggerLogo className='inline-block' /> |
+              Lucidchart <LucidChartLogo className='inline-block' /> |
+              Excalidraw <ExcalidrawLogo className='inline-block' /> |
+              Confluence <ConfluenceLogo className='inline-block' /> | JIRA{' '}
+              <JIRALogo className='inline-block' /> | Excel{' '}
+              <MicrosoftExcelLogo className='inline-block' />
+            </li>
+            <li>
+              Communication: Slack <SlackLogo className='inline-block' /> |
+              Microsoft Teams <MicrosoftTeamsLogo className='inline-block' />
+            </li>
           </ol>
           <br />
           <span className='font-bold'>Personal Interests</span>
           <ol className='list-inside list-disc'>
-            <li>Rock Climbing</li>
-            <li>DIY / Home Improvement</li>
-            <li>Improv Comedy</li>
-            <li>Cats</li>
-            <li>Chess</li>
-            <li>Videogames</li>
+            <li>
+              Rock Climbing <RockClimbingLogo className='inline-block' /> | DIY{' '}
+              <ConstructionLogo className='inline-block' /> | Improv Comedy{' '}
+              <ComedyLogo className='inline-block' /> | Cats{' '}
+              <CatLogo className='inline-block' /> | Chess{' '}
+              <ChessLogo className='inline-block' /> | Videogames{' '}
+              <VideogamesLogo className='inline-block' />
+            </li>
           </ol>
         </div>
       </main>
