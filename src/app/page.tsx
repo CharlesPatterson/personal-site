@@ -43,6 +43,7 @@ import LucidChartLogo from '~icons/flat-color-icons/line-chart.jsx';
 import RockClimbingLogo from '~icons/map/climbing.jsx';
 import VideogamesLogo from '~icons/arcticons/games.jsx';
 import AWSLogo from '~icons/logos/aws.jsx';
+import PagerdutyLogo from '~icons/logos/pagerduty.jsx';
 
 const companies = [
   {
@@ -52,7 +53,7 @@ const companies = [
   },
   {
     name: 'Compass Learning / Edgenuity',
-    industry: 'EdTech',
+    industry: 'Ed-Tech',
     url: 'https://www.imaginelearning.com/',
   },
   {
@@ -62,14 +63,14 @@ const companies = [
   },
   {
     name: 'E2open',
-    industry: 'Supply Chain management',
+    industry: 'Supply Chain',
     url: 'https://www.e2open.com/',
   },
 ];
 
 export default function About() {
   return (
-    <div className='grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center font-sans'>
+    <div className='font-inter grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center'>
       <main className='row-start-2 m-5 flex flex-col items-center gap-[32px]'>
         <h2 className='text-8xl [text-shadow:_0_4px_8px_rgba(128,128,128,0.6)]'>
           <a
@@ -103,97 +104,126 @@ export default function About() {
             three cats.
           </p>
           <br />
-          <span className='font-bold'>
-            Companies and Industries I&apos;ve worked in:
-          </span>
-          <ol className='list-inside list-disc'>
+          <span className='font-bold'>Companies / Industries</span>
+          <ol>
             {companies.map(({ name, industry, url }) => {
               return (
-                <li key={name}>
+                <li key={name} className='ml-5'>
                   <a href={url} target='_blank' rel='noopener noreferrer'>
-                    {name} - {industry}
+                    <span className='italic'>{name}</span> <br />
+                    <span className='ml-5'>{industry}</span>
                   </a>
                 </li>
               );
             })}
           </ol>
           <br />
-          <span className='font-bold'>
-            Technologies I&apos;ve enjoyed working with:
-          </span>
-          <ol className='list-inside list-disc'>
+          <span className='font-bold'>Technologies</span>
+          <ol className='ml-5'>
             <li>
-              Languages: Typescript <TypescriptLogo className='inline-block' />{' '}
-              | Javascript <JavascriptLogo className='inline-block' /> | Golang{' '}
-              <GoLogo className='inline-block' /> | Python{' '}
-              <PythonLogo className='inline-block' />{' '}
+              <h3 className='italic'>Languages</h3>{' '}
+              <p className='mb-2 ml-5'>
+                Typescript <TypescriptLogo className='inline-block' /> |
+                Javascript <JavascriptLogo className='inline-block' /> | Golang{' '}
+                <GoLogo className='inline-block' /> | Python{' '}
+                <PythonLogo className='inline-block' />{' '}
+              </p>
             </li>
             <li>
-              Frameworks/Libraries: Next.js{' '}
-              <NextLogo className='inline-block' /> | Express.js{' '}
-              <ExpressLogo className='inline-block' /> | FastAPI{' '}
-              <FastAPILogo className='inline-block' /> | Tailwind{' '}
-              <TailwindCSSLogo className='inline-block' /> | React{' '}
-              <ReactLogo className='inline-block' />
+              <h3 className='italic'>Frameworks/Libraries</h3>
+              <p className='mb-2 ml-5'>
+                Next.js <NextLogo className='inline-block' /> | Express.js{' '}
+                <ExpressLogo className='inline-block' /> | FastAPI{' '}
+                <FastAPILogo className='inline-block' /> | Tailwind{' '}
+                <TailwindCSSLogo className='inline-block' /> | React{' '}
+                <ReactLogo className='inline-block' />
+              </p>
             </li>
             <li>
-              Builds: Github Actions{' '}
-              <GithubActionsLogo className='inline-block' /> | Jenkins{' '}
-              <JenkinsLogo className='inline-block' />
+              <h3 className='italic'>APIs</h3>
+              <p className='mb-2 ml-5'>
+                GraphQL <GraphQLLogo className='inline-block' /> | REST{' '}
+                <RestAPILogo className='inline-block' /> |{' '}
+                <GRPCLogo className='inline-block' />
+              </p>
             </li>
             <li>
-              APIs: GraphQL <GraphQLLogo className='inline-block' /> | REST{' '}
-              <RestAPILogo className='inline-block' /> |{' '}
-              <GRPCLogo className='inline-block' />
+              <h3 className='italic'>Builds</h3>
+              <p className='mb-2 ml-5'>
+                Github Actions
+                <GithubActionsLogo className='inline-block' /> | Jenkins{' '}
+                <JenkinsLogo className='inline-block' />
+              </p>
             </li>
             <li>
-              Infrastructure / Cloud: <AWSLogo className='inline-block' /> |
-              Kubernetes <KubernetesLogo className='inline-block' /> | Docker{' '}
-              <DockerLogo className='inline-block' /> | Terraform{' '}
-              <TerraformLogo className='inline-block' />
+              <h3 className='italic'>Databases/Storage</h3>
+              <p className='mb-2 ml-5'>
+                Postgres <PostgresqlLogo className='inline-block' /> | DynamoDB{' '}
+                <DynamoDBLogo className='inline-block' /> | Redis{' '}
+                <RedisLogo className='inline-block' />
+              </p>
             </li>
             <li>
-              Databases/Storage: Postgres{' '}
-              <PostgresqlLogo className='inline-block' /> | DynamoDB{' '}
-              <DynamoDBLogo className='inline-block' /> | Redis{' '}
-              <RedisLogo className='inline-block' />
+              <h3 className='italic'>Cloud Services / Infrastructure</h3>{' '}
+              <p className='mb-2 ml-5'>
+                <AWSLogo className='inline-block' /> | Kubernetes{' '}
+                <KubernetesLogo className='inline-block' /> | Docker{' '}
+                <DockerLogo className='inline-block' /> | Terraform{' '}
+                <TerraformLogo className='inline-block' />
+              </p>
             </li>
             <li>
-              APM: Datadog <DatadogLogo className='inline-block' />
-            </li>
-          </ol>
-          <br />
-          <span className='font-bold'>Tools I Frequently Use:</span>
-          <ol className='list-inside list-disc'>
-            <li>
-              Editors: CursorAI <CursorAILogo className='inline-block' /> | VS
-              Code <VisualStudioCodeLogo className='inline-block' /> | NeoVIM{' '}
-              <NeoVimLogo className='inline-block' /> | Textmate{' '}
-              <TextmateLogo className='inline-block' />
-            </li>
-            <li>
-              Devtools: Git <GithubLogo className='inline-block' /> | Postman{' '}
-              <PostmanLogo className='inline-block' /> | Chrome DevTools{' '}
-              <ChromeLogo className='inline-block' /> | zsh{' '}
-              <ZshLogo className='inline-block' />
-            </li>
-            <li>
-              Documentation: Swagger <SwaggerLogo className='inline-block' /> |
-              Lucidchart <LucidChartLogo className='inline-block' /> |
-              Excalidraw <ExcalidrawLogo className='inline-block' /> |
-              Confluence <ConfluenceLogo className='inline-block' /> | JIRA{' '}
-              <JIRALogo className='inline-block' /> | Excel{' '}
-              <MicrosoftExcelLogo className='inline-block' />
-            </li>
-            <li>
-              Communication: Slack <SlackLogo className='inline-block' /> |
-              Microsoft Teams <MicrosoftTeamsLogo className='inline-block' />
+              <h3 className='italic'>APM</h3>
+              <p className='ml-5'>
+                Datadog <DatadogLogo className='inline-block' /> |{' '}
+                <PagerdutyLogo className='inline-block' />
+              </p>
             </li>
           </ol>
           <br />
-          <span className='font-bold'>Personal Interests</span>
-          <ol className='list-inside list-disc'>
+          <span className='font-bold'>Tools</span>
+          <ol className='ml-5'>
             <li>
+              <h3 className='italic'>Editors</h3>
+              <p className='mb-2 ml-5'>
+                CursorAI <CursorAILogo className='inline-block' /> | VS Code{' '}
+                <VisualStudioCodeLogo className='inline-block' /> | NeoVIM{' '}
+                <NeoVimLogo className='inline-block' /> | Textmate{' '}
+                <TextmateLogo className='inline-block' />
+              </p>
+            </li>
+            <li>
+              <h3 className='italic'>DevTools</h3>
+              <p className='mb-2 ml-5'>
+                Git <GithubLogo className='inline-block' /> | Postman{' '}
+                <PostmanLogo className='inline-block' /> | Chrome DevTools{' '}
+                <ChromeLogo className='inline-block' /> | zsh{' '}
+                <ZshLogo className='inline-block' />
+              </p>
+            </li>
+            <li>
+              <h3 className='italic'>Documentation</h3>
+              <p className='mb-2 ml-5'>
+                Swagger <SwaggerLogo className='inline-block' /> | Lucidchart{' '}
+                <LucidChartLogo className='inline-block' /> | Excalidraw{' '}
+                <ExcalidrawLogo className='inline-block' /> | Confluence{' '}
+                <ConfluenceLogo className='inline-block' /> | JIRA{' '}
+                <JIRALogo className='inline-block' /> | Excel{' '}
+                <MicrosoftExcelLogo className='inline-block' />
+              </p>
+            </li>
+            <li>
+              <h3 className='italic'>Communication</h3>
+              <p className='mb-2 ml-5'>
+                Slack <SlackLogo className='inline-block' /> | Microsoft Teams{' '}
+                <MicrosoftTeamsLogo className='inline-block' />
+              </p>
+            </li>
+          </ol>
+          <br />
+          <span className='font-bold'>Interests</span>
+          <ol>
+            <li className='ml-5'>
               Rock Climbing <RockClimbingLogo className='inline-block' /> | DIY{' '}
               <ConstructionLogo className='inline-block' /> | Improv Comedy{' '}
               <ComedyLogo className='inline-block' /> | Cats{' '}

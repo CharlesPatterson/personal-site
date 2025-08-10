@@ -1,8 +1,14 @@
 import { Metadata } from 'next';
-import { Fira_Sans, Fira_Mono } from 'next/font/google';
+import { Fira_Sans, Fira_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/lib/ui/components/Header';
 import Footer from '@/lib/ui/components/Footer';
+
+const inter = Inter({
+  weight: '400',
+  variable: '--font-inter',
+  subsets: ['latin'],
+});
 
 const firaSans = Fira_Sans({
   weight: '400',
@@ -28,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${firaSans.variable} ${firaMono.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${firaSans.variable} ${firaMono.variable} antialiased`}
+      >
         <Header></Header>
         {children}
         <Footer></Footer>
