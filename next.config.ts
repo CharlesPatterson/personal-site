@@ -2,8 +2,8 @@ import type { NextConfig } from 'next';
 import unpluginIcons from 'unplugin-icons/webpack';
 
 const nextConfig: NextConfig = {
-  basePath: '/personal-site',
-  assetPrefix: '/personal-site/',
+  basePath: process.env.NODE_ENV === 'development' ? '' : '/personal-site',
+  assetPrefix: process.env.NODE_ENV === 'development' ? '/' : '/personal-site/',
   output: 'export',
   reactStrictMode: true,
   images: {
