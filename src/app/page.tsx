@@ -76,8 +76,10 @@ export default function About() {
             href='https://www.linkedin.com/in/charles-patterson-fullstack-engineer/'
             target='_blank'
             rel='noopener noreferrer'
+            className='flex items-center max-sm:flex-col'
           >
-            Charles Patterson
+            <span>Charles&nbsp;</span>
+            <span>Patterson</span>
           </a>
         </h2>
         <div className='fade-in'>
