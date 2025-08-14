@@ -3,6 +3,7 @@ import { Fira_Sans, Fira_Mono, Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/lib/ui/components/Header';
 import Footer from '@/lib/ui/components/Footer';
+import ScrollToTopButton from '@/lib/ui/components/ScrollToTopButton';
 
 const inter = Inter({
   weight: '400',
@@ -39,6 +40,7 @@ export default function RootLayout({
       >
         <Header></Header>
         {children}
+        <ScrollToTopButton />
         <Footer></Footer>
       </body>
     </html>
