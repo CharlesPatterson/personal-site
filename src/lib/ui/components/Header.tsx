@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import DarkModeSlider from './DarkModeSlider';
+import DarkModeButton from './DarkModeButton';
 import DocumentLogo from '~icons/basil/document-outline.jsx';
 import PersonLogo from '~icons/ic/outline-person.jsx';
 import GithubSilhouetteLogo from '~icons/icon-park-outline/github.jsx';
@@ -87,7 +87,7 @@ export default function Header() {
         );
       })}
 
-      <DarkModeSlider />
+      <DarkModeButton />
     </div>
   );
 }

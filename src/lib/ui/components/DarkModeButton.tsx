@@ -1,27 +1,12 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import MoonLogo from '~icons/solar/moon-outline.jsx';
 import SunLogo from '~icons/solar/sun-2-outline.jsx';
 
-const DarkModeSlider = () => {
+const DarkModeButton = () => {
   const [theme, setTheme] = useState(() => {
-    /*
-    if (typeof window !== 'undefined') {
-      const storedTheme = localStorage.getItem('theme');
-      if (storedTheme) {
-        return storedTheme;
-      }
-    }
-      */
-
     return 'light';
   });
-
-  /*
-  useEffect(() => {
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-  */
 
   return (
     <div className='flex flex-row items-center font-bold hover:text-cyan-600'>
@@ -50,4 +35,4 @@ const DarkModeSlider = () => {
     </div>
   );
 };
-export default DarkModeSlider;
+export default DarkModeButton;
