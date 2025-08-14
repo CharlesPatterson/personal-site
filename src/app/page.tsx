@@ -70,7 +70,7 @@ const companies = [
 export default function About() {
   return (
     <div className='font-inter grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center'>
-      <main className='row-start-2 m-5 flex flex-col items-center gap-[32px] transition duration-500 ease-in-out'>
+      <main className='transition-[color, border-color] row-start-2 m-5 flex flex-col items-center gap-[32px] duration-500 ease-in-out'>
         <h2 className='text-6xl [text-shadow:_0_4px_8px_rgba(128,128,128,0.6)]'>
           <a
             href='https://www.linkedin.com/in/charles-patterson-fullstack-engineer/'

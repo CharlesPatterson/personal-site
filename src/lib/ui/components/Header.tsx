@@ -46,7 +46,7 @@ export default function Header() {
             href={destination}
             className={
               (isSelected ? 'text-cyan-600 ' : '') +
-              'flex w-full items-center justify-center px-4 text-sm font-bold transition duration-500 ease-in-out sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px]'
+              'transition-[color, border-color] flex w-full items-center justify-center px-4 text-sm font-bold duration-500 ease-in-out sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px]'
             }
           >
             {name}
@@ -68,7 +68,7 @@ export default function Header() {
           <a
             key={name}
             href={destination}
-            className='font flex w-full items-center justify-center px-4 text-sm font-bold transition duration-500 ease-in-out sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px]'
+            className='font transition-[color, border-color] flex w-full items-center justify-center px-4 text-sm font-bold duration-500 ease-in-out sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px]'
             target='_blank'
             rel='noopener noreferrer'
           >
