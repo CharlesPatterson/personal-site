@@ -9,7 +9,7 @@ const DarkModeButton = () => {
   });
 
   return (
-    <div className='flex flex-row items-center font-bold hover:text-cyan-600'>
+    <div className='flex flex-row items-center text-sm font-bold hover:text-cyan-600'>
       <label htmlFor='checkbox' className='cursor-pointer'>
         <input
           className='peer hidden cursor-pointer'
